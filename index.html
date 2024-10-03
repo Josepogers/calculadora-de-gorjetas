@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de gorjetas</title>
+</head>
+<link rel="stylesheet" href="index.css">
+
+<body>
+    <div class="container">
+        <div class="area-calculadora">
+            <form class="form">
+                <h1 class="tittle">
+                    Calculadora de gorjetas
+                </h1><br>
+                <p class="gorjeta-resultado-area" style="margin: 0px; position: absolute;"></p>
+                <div class="labels-inputs">
+                    <label for="total-conta">Total da conta</label><br>
+                    <input class="total-conta" type="number" style="border-radius: 10px;"><br>
+                    <label for="numero-pagantes">Numero de pessoas que irão dividir:</label><br>
+                    <input type="number" class="numero-pagantes" placeholder="por favor, apenas numeros"
+                        style="border-radius: 10px;"><br>
+                    <label for="gorjeta">Gorjeta para o garçom</label>
+                    <input type="text" placeholder="Escolha a gorjeta" list="faixa" style="border-radius: 10px;">
+                    <datalist id="faixa">
+                        <option value="">Qualidade do atendimento</option>
+                        <option value="0%">Pessimo atendimento</option>
+                        <option value="5%">Bom atendimento</option>
+                        <option value="15%">Ótimo atendimento</option>
+                    </datalist>
+                </div>
+                <button class="button" style="width: 150px; font-size: large; ">Calcular</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    const button = document.querySelector('.button')
+    const total_conta = document.querySelector('.total-conta')
+    const numeroPagantes = document.querySelector('.numero-pagantes')
+    const gorjetaResultadoArea = document.querySelector('.gorjeta-resultado-area')
+    const Resultado = () => {
+        const total_contaNumber = parseFloat(total_conta.value)
+        const numeroPagantesNumber = parseFloat(numeroPagantes.value)
+        const divisao = total_contaNumber / numeroPagantesNumber
+        return "o resultado é " + divisao
+    }
+    button.addEventListener('click', (event) => {
+        event.preventDefault()
+        gorjetaResultadoArea.innerHTML = Resultado()
+    })
+</script>
+
+</html>

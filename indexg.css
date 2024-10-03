@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Fonte mais suave */
+    background-color: #f4f4f4; /* Fundo mais claro */
+}
+
+.container {
+    height: 100vh; /* Ocupar a tela toda */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6666; /* Vermelho mais suave */
+}
+
+.area-calculadora {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Ajusta o tamanho automaticamente */
+    width: 300px; /* Largura fixa */
+    border-radius: 20px;
+    padding: 40px; /* Menos padding */
+    background-color: #1a73e8; /* Azul mais elegante */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%; /* Ajusta a largura ao contêiner */
+    gap: 20px; /* Espaçamento entre os elementos */
+    font-size: 18px; /* Fonte um pouco menor */
+    font-weight: bold;
+    color: #fff; /* Texto branco para contraste */
+}
+
+.title {
+    font-size: 24px; /* Tamanho maior */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    background-color: #fff; /* Fundo branco */
+    color: #333; /* Texto preto */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra no título */
+    text-align: center;
+    width: 100%; /* Largura total */
+}
+
+.labels-inputs {
+    flex-direction: column;
+    display: flex;
+    gap: 10px; /* Espaçamento entre labels e inputs */
+    width: 100%;
+}
+
+input[type="text"], input[type="number"], button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #1a73e8;
+    box-shadow: 0px 0px 5px rgba(26, 115, 232, 0.5); /* Sombra azul ao focar */
+    outline: none;
+}
+
+button {
+    background-color: #1a73e8;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0
+}
